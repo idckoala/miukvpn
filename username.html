@@ -16,14 +16,11 @@
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #6e7dff, #84a9ff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding-top: 40px;
             background-size: cover;
-            overflow: hidden;
             animation: backgroundAnimation 15s ease-in-out infinite;
             width: 100vw;
+            height: auto;
         }
 
         @keyframes backgroundAnimation {
@@ -40,6 +37,7 @@
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 500px;
+            margin: 0 auto;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
