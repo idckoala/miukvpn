@@ -7,10 +7,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        body {
-            font-family: 'Poppins', sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #6e7dff, #84a9ff);
             display: flex;
             justify-content: center;
@@ -19,6 +23,7 @@
             background-size: cover;
             overflow: hidden;
             animation: backgroundAnimation 15s ease-in-out infinite;
+            width: 100vw;
         }
 
         @keyframes backgroundAnimation {
@@ -28,28 +33,27 @@
         }
 
         .form-container {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(15px);
-            padding: 40px 50px;
+            padding: 30px 20px;
             border-radius: 15px;
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 550px;
-            box-sizing: border-box;
+            width: 90%;
+            max-width: 500px;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         .form-container:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
             text-align: center;
             color: #2f2f2f;
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 2px;
             animation: fadeIn 1s ease-out;
@@ -61,31 +65,32 @@
         }
 
         label {
-            font-size: 16px;
+            font-size: 15px;
             color: #2f2f2f;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: block;
         }
 
-        input[type="email"], input[type="password"], input[type="tel"], input[type="checkbox"] {
+        input[type="email"], input[type="password"] {
             width: 100%;
-            padding: 12px 15px;
-            margin: 12px 0 25px 0;
+            padding: 10px 14px;
+            margin: 10px 0 20px 0;
             border: none;
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.7);
             color: #333;
             font-size: 16px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(8px);
         }
 
         input[type="checkbox"] {
             width: auto;
+            margin-right: 10px;
         }
 
-        input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
+        input:focus {
             background: #84a9ff;
             color: #fff;
             outline: none;
@@ -96,32 +101,33 @@
             background-color: #84a9ff;
             color: white;
             border: none;
-            padding: 15px;
+            padding: 13px;
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             width: 100%;
             border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
             transition: all 0.3s ease;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         button:hover {
             background-color: #6e7dff;
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
 
         .terms {
             font-size: 14px;
             color: #2f2f2f;
-            margin-top: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
         }
 
         .link-login {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .link-login a {
@@ -150,9 +156,6 @@
 
             <label for="confirmPassword">ยืนยันรหัสผ่าน:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
-
-            <label for="phone">หมายเลขโทรศัพท์:</label>
-            <input type="tel" id="phone" name="phone">
 
             <div class="terms">
                 <label>
